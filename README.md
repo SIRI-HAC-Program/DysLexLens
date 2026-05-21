@@ -1,4 +1,4 @@
-# Dyslexia Project
+# Dyslexia Knowledge Graph Project
 
 ## Prerequisites
 
