@@ -22,3 +22,5 @@ These variants were used to evaluate:
 - Response Groundedness
 
 under different query formulations.
+
+GPT5.5 Pro is used to generate those variants.
