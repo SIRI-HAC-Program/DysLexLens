@@ -1,5 +1,5 @@
 
-# Human Evaluation Protocol for Claim-Level Qualitative Analysis
+# Rubric_based Human Assessment Guideline
 
 ## Purpose of the Evaluation
 
