@@ -46,6 +46,14 @@ streamlit run app.py
 
 Once the app loads in your browser, paste your API key into the input field when prompted.
 
+
+
+## Benchmark Questions
+
+The benchmark research questions and follow-up queries used in the paper are available in:
+
+- `questions/benchmark_questions.md`
+
 ---
 
 ## Notes
