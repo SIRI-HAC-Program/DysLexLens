@@ -72,18 +72,17 @@ DysLexLens/
 ├── CITATION.cff
 ├── .gitignore
 │
-├── docs/
-│   ├── README.md
-│   ├── repository_structure.md
-│   ├── running_the_tool.md
-│   ├── knowledge_graph/
-│   │   └── graph_RQ1.html
-│   └── main_questions/
+├── knowledge_graph/
 │       ├── RQ1/
+│           ├── graph_RQ1.html
 │       ├── RQ2/
+│           ├── graph_RQ2.html
 │       ├── RQ3/
+│           ├── graph_RQ3.html
 │       ├── RQ4/
+│           ├── graph_RQ4.html
 │       └── RQ5/
+│           ├── graph_RQ5.html
 │
 ├── questions/
 │   ├── README.md
