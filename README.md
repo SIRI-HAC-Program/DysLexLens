@@ -37,7 +37,7 @@ The repository includes quantitative and qualitative evaluation materials, inclu
 - Concept dictionary-based filtering for building a topic-focused corpus
 - Reusable Knowledge Graph construction from online forum data
 - Query-based reasoning over semantic triples and retrieved source text
-- Source-grounded response generation with cited evidence
+- Source-grounded response generation followed by source chunk Identifiers
 - Follow-up question support for deeper analysis
 - Evidence tracing for fact-checking and provenance inspection
 - RAGAS-based quantitative evaluation
@@ -250,7 +250,7 @@ This folder includes:
 This assessment checks whether generated claims are:
 
 - present in the original source
-- supported by cited evidence
+- supported by relevant source chunk
 - interpretable through traceable provenance
 
 ---
