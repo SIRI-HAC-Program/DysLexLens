@@ -365,8 +365,8 @@ data/README.md
 
 ---
 
-## Project Summary
+## Notes on DysLexLens Use Cases
 
-DysLexLens is designed as an evidence-traceable research assistant for analysing online forum data. It helps researchers retrieve relevant records, generate structured first-pass interpretations, ask follow-up questions, and trace claims back to supporting evidence.
+DysLexLens is designed as an evidence-traceable assistant for analysing online forum data. It helps researchers retrieve relevant records, generate structured first-pass interpretations, ask follow-up questions, and trace claims back to supporting evidence.
 
-The framework should not be treated as a fully automated interpretation tool. Human review remains important, especially for broad claims, temporal analysis, and educational or institutional interpretations.
+The framework should not be treated as a fully automated interpretation tool. Human review remains important, especially for broad claims, and educational or institutional interpretations.
