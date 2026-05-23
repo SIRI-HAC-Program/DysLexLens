@@ -40,12 +40,10 @@ Public Reddit posts and comments, retrieved from the **Arctic Shift** archive (n
 ## Ethical considerations
 
 - **Public data only.** No private messages, private subreddits, or authenticated endpoints.
-- **Identifiers.** Usernames are retained as published. Pseudonymise or remove before any downstream sharing.
-- **Quotation.** Direct quotes can re-identify users via search engines even with usernames removed; paraphrase or aggregate.
+- **Identifiers.** Usernames are retained as published. Remove before any downstream sharing.
 - **Deleted content.** `[deleted]` indicates removal by the user — exclude from verbatim use.
 - **Rate limiting.** 2-second delay between requests.
-- **Vulnerable communities.** Subreddits on health, disability, or other sensitive topics warrant extra care: minimise quotation, avoid re-identifying attribute combinations, follow the project's ethics framework.
-- **No redistribution of raw data.** Raw CSVs are intermediate; follow the project's data-handling plan.
+- **Vulnerable communities.** Subreddits on health, disability, or other sensitive topics warrant extra care: minimise quotation, avoid re-identifying attribute combinations.
 
 ---
 
@@ -162,7 +160,7 @@ parent_id      : t1_nwf7ong
 depth          : 2
 ```
 
-Full data can be requested to drezazadegan@swin.edu.au
+Full dataset can be requested to drezazadegan@swin.edu.au
 
 
 ---
