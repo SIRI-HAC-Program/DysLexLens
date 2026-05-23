@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+.DS_Store
+saved_runs/
+logs/
+*.log
+index/fixed_property_graph_index/*
+!index/fixed_property_graph_index/.gitkeep
