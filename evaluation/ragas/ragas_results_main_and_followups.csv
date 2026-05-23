@@ -1,0 +1,31 @@
+response_type,question_id,followup_number,question_label,question_text,Answer Relevancy,Faithfulness,Context Relevance,Response Groundedness
+main,RQ1,,RQ1,What are the primary learning-related use-cases for AI tools described by dyslexic learners in online discussions?,0.944,0.167,0.75,0.5
+followup,RQ1,1,RQ1_F1,"How do dyslexic users describe the role of assistive technology accommodations like laptops for exams, extra time, or browser extensions in supporting their learning?",0.732,0.0,0.5,0.0
+followup,RQ1,2,RQ1_F2,"What specific reading-support features, such as coloured overlays, reading guides, bionic reading, or adjustable spacing, do dyslexic users describe as more helpful than font changes alone?",0.878,0.0,0.5,0.25
+followup,RQ1,3,RQ1_F3,How is AI described as part of everyday study routines compared with one-off or occasional use?,0.85,0.857,0.5,0.5
+followup,RQ1,4,RQ1_F4,"How do reported AI use-cases differ between school, university, and work-related learning contexts?",0.63,0.077,0.0,0.5
+followup,RQ1,5,RQ1_F5,"In what ways do learners use AI to support idea generation, task understanding, or organisation of thoughts during study?",0.841,0.588,0.5,0.75
+main,RQ2,,RQ2,What benefits and failure modes do dyslexic learners report when using AI tools for different learning tasks?,0.934,0.625,0.5,0.5
+followup,RQ2,1,RQ2_F1,"When do users describe AI outputs as inaccurate, too generic, confusing, or not aligned with what they were trying to express?",0.733,0.8,0.25,0.25
+followup,RQ2,2,RQ2_F2,In what ways do learners describe AI as helping themparticipatemore effectively in education or work-based learning environments?,0.912,0.214,0.5,0.5
+followup,RQ2,3,RQ2_F3,"In what situations do users describe AI as offering limited value compared with other assistive tools, accommodations, or personal coping strategies?",0.71,0.0,0.0,0.25
+followup,RQ2,4,RQ2_F4,"What concerns do dyslexic learners raise about over-reliance on AI, reduced skill development, or uncertainty about whether they are really learning?",0.0,0.6,0.5,0.5
+followup,RQ2,5,RQ2_F5,"How do learners describe AI improving clarity, confidence, or speed when completing learning-related work?",0.885,0.364,0.5,0.5
+main,RQ3,,RQ3,"Under what conditions are AI tools described as helpful, supportive, or inclusive for dyslexic learners?",0.869,0.667,0.5,0.0
+followup,RQ3,1,RQ3_F1,"How do parents of dyslexic ordysgraphicchildren describe their experiences building,seeking, or customizing AI tools when existing solutions and school accommodations fall short?",0.767,0.267,1.0,0.25
+followup,RQ3,2,RQ3_F2,"What role do accessibility, ease of use, and low effort play in whether AI tools are experienced as inclusive?",0.831,1.0,0.5,0.0
+followup,RQ3,3,RQ3_F3,"How do dyslexic learners and their families describe negotiating with schools or teachers to gain acceptance of AI tools, dictation, or typing as legitimate accommodations rather than as shortcuts?",0.848,1.0,1.0,0.5
+followup,RQ3,4,RQ3_F4,"What user practices, such as prompting, checking outputs, or combining AI with other tools, are associated with more positive experiences?",0.688,1.0,0.25,1.0
+followup,RQ3,5,RQ3_F5,"How do task type, context, or severity of difficulty shape whether AI is perceived as supportive?",0.852,1.0,0.5,0.5
+main,RQ4,,RQ4,"How are AI-based supports discussed in relation to broader educational challenges and support structures, including institutional accommodations and personal coping strategies?",0.653,0.182,0.5,0.25
+followup,RQ4,1,RQ4_F1,"In what ways is AI discussed as complementing, replacing, or compensating for existing support structures?",0.467,0.889,0.5,0.5
+followup,RQ4,2,RQ4_F2,"What gaps in school, university, or workplace support lead learners to turn to AI tools?",0.826,0.5,0.5,0.5
+followup,RQ4,3,RQ4_F3,How do dyslexic learners describe the legitimacy and acceptance of AI-based accommodations within formal IEPs or institutional support plans compared to traditional accommodations like extra time or dictation?,0.824,0.25,0.5,0.75
+followup,RQ4,4,RQ4_F4,"How are concerns about fairness, legitimacy, or dependency discussed when AI is used alongside institutional accommodations?",0.621,1.0,0.0,0.5
+followup,RQ4,5,RQ4_F5,"How do learners position AI within their wider personal coping strategies for reading, writing, organisation, or communication?",0.831,,0.5,0.5
+main,RQ5,,RQ5,"How have discussions of AI tools among dyslexic learners changed over time in terms of prevalence, tone, and perceived role in learning support?",0.951,0.333,0.0,0.5
+followup,RQ5,1,RQ5_F1,"What do dyslexic learners say about community attitudes, rules, orskepticismtoward AI-built tools, and how does this affect their willingness to try or recommend such tools?",0.809,0.154,0.25,0.5
+followup,RQ5,2,RQ5_F2,How have perceived benefits and risks of AI evolved as these tools have become more widely available?,0.842,0.286,0.0,0.5
+followup,RQ5,3,RQ5_F3,How has the volume of AI-related discussion among dyslexic learners changed over time?,0.0,1.0,0.0,0.0
+followup,RQ5,4,RQ5_F4,"How have the main reported uses of AI shifted over time, for example from general curiosity to everyday academic or workplace support?",0.818,0.3,0.0,0.5
+followup,RQ5,5,RQ5_F5,"How has the role of AI in dyslexia-related support changed over timerelativeto broader discussions of technology, accommodations, and coping strategies?",0.915,0.882,0.5,0.75
