@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use DysLexLens in your research, please cite this software and the related paper."
+title: "DysLexLens: A Low-Resource LLM Framework for Analysing Dyslexic Learners’ Insights from Online Forums"
+type: software
+
+authors:
+  - family-names: "Rezazadegan"
+    given-names: "Dana"
+  - family-names: "Kia"
+    given-names: "Atie"
+  - family-names: "Nandavong"
+    given-names: "Phongpadid"
+  - family-names: "Carlon"
+    given-names: "Dominique"
+  - family-names: "Nguyen"
+    given-names: "Jeremy"
+  - family-names: "Banerjee"
+    given-names: "Abhik"
+  - family-names: "Marshall"
+    given-names: "James"
+  - family-names: "McCosker"
+    given-names: "Anthony"
+  - family-names: "Kang"
+    given-names: "Yong-Bin"
+
+repository-code: "https://github.com/SIRI-HAC-Program/DysLexLens"
+url: "https://github.com/SIRI-HAC-Program/DysLexLens"
+
+version: "1.0.0"
+date-released: "2026-05-23"
+
+keywords:
+  - dyslexia
+  - large language models
+  - knowledge graphs
+  - Reddit
+  - assistive technology
+  - inclusive AI
+  - retrieval-augmented generation
+  - human-grounded evaluation
+
+license: "Swinburne University of Technology, Social Innovation Research Institute"
