@@ -1,62 +1,9 @@
-# Dyslexia Knowledge Graph Project
+This repository presents **DysLexLens**, a low-resource LLM framework for examining how dyslexic learners describe their learning challenges, coping strategies, support needs, and use of AI tools within broader educational and social contexts over time.
 
-## Prerequisites
+DysLexLens supports the full workflow from targeted online data collection to query-based reasoning, evidence tracing, and response evaluation. Although this repository focuses on dyslexia-related Reddit discussions, the framework can be adapted to other forms of online forum or social media data.
 
-- Python 3.x installed on your machine
-- An API key (provided separately)
+To build a topic-focused corpus for downstream analysis, DysLexLens applies a concept dictionary-based filtering method. It then constructs a reusable Knowledge Graph (KG) from the final filtered corpus. Given a user query, DysLexLens retrieves relevant semantic triples from the KG and supporting text passages from the corpus. It combines graph-based semantic interpretation with source-grounded response generation, allowing users to ask main research questions and follow-up questions.
 
----
+The framework also includes a three-stage evidence-tracing pipeline to support fact-checking and provenance inspection. This pipeline links generated claims to cited source chunks, supporting evidence, and original Reddit records where available.
 
-## Setup Instructions
-
-### 1. Create a Virtual Environment
-
-```bash
-cd PROJECT
-python3 -m venv dyslexia_env
-```
-
-### 2. Activate the Virtual Environment
-
-```bash
-source dyslexia_env/bin/activate
-```
-
-> **Windows users:** use `dyslexia_env\Scripts\activate` instead.
-
-### 3. Upgrade pip
-
-```bash
-pip install --upgrade pip
-```
-
-### 4. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 5. Run the Project
-
-```bash
-streamlit run app.py
-```
-
-### 6. Enter Your API Key
-
-Once the app loads in your browser, paste your API key into the input field when prompted.
-
-
-
-## Benchmark Questions
-
-The benchmark research questions and follow-up queries used in the paper are available in:
-
-- `questions/benchmark_questions.md`
-
----
-
-## Notes
-
-- Make sure the virtual environment is activated before running the project.
-- If you encounter any issues with dependencies, ensure you are using a compatible Python version.
+In addition to automatic RAGAS-based evaluation and query robustness analysis, the repository provides a rubric-based human assessment guideline in the `evaluation/human_provenance_audit/` folder. This supports evaluation of whether generated responses are relevant, factually consistent, grounded in retrieved evidence, and interpretable through traceable provenance.
