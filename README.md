@@ -58,17 +58,7 @@ docs/knowledge_graph/graph_RQ1.html
 
 If GitHub does not render the interactive HTML directly, download the file and open it in a web browser.
 
-A static screenshot of the graph may also be included in the same folder as:
 
-```text
-docs/knowledge_graph/graph_RQ1.png
-```
-
-If available, it can be displayed below:
-
-```md
-![Example Knowledge Graph for RQ1](docs/knowledge_graph/graph_RQ1.png)
-```
 
 ---
 
