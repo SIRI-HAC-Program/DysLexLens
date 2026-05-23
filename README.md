@@ -1,9 +1,411 @@
-This repository presents **DysLexLens**, a low-resource LLM framework for examining how dyslexic learners describe their learning challenges, coping strategies, support needs, and use of AI tools within broader educational and social contexts over time.
+# DysLexLens
 
-DysLexLens supports the full workflow from targeted online data collection to query-based reasoning, evidence tracing, and response evaluation. Although this repository focuses on dyslexia-related Reddit discussions, the framework can be adapted to other forms of online forum or social media data.
+**DysLexLens** is a low-resource LLM framework for analysing how dyslexic learners discuss learning challenges, coping strategies, support needs, and AI tools in online forums.
 
-To build a topic-focused corpus for downstream analysis, DysLexLens applies a concept dictionary-based filtering method. It then constructs a reusable Knowledge Graph (KG) from the final filtered corpus. Given a user query, DysLexLens retrieves relevant semantic triples from the KG and supporting text passages from the corpus. It combines graph-based semantic interpretation with source-grounded response generation, allowing users to ask main research questions and follow-up questions.
+This repository presents the source code, benchmark questions, data resources, evaluation files, and supporting documentation for DysLexLens. The framework supports the full workflow from targeted online data collection to query-based reasoning, evidence tracing, and response evaluation.
 
-The framework also includes a three-stage evidence-tracing pipeline to support fact-checking and provenance inspection. This pipeline links generated claims to cited source chunks, supporting evidence, and original Reddit records where available.
+Although this repository focuses on dyslexia-related Reddit discussions, the framework can be adapted to other online forum or social media datasets.
 
-In addition to automatic RAGAS-based evaluation and query robustness analysis, the repository provides a rubric-based human assessment guideline in the `evaluation/human_provenance_audit/` folder. This supports evaluation of whether generated responses are relevant, factually consistent, grounded in retrieved evidence, and interpretable through traceable provenance.
+---
+
+## Overview
+
+DysLexLens examines how dyslexic learners describe their challenges, coping strategies, and solutions, and how they position AI tools within broader support contexts over time.
+
+The framework applies a concept dictionary-based filtering method to build a more topic-focused corpus for downstream analysis. It then constructs a reusable Knowledge Graph (KG) from the filtered corpus. Given a user query, DysLexLens retrieves relevant semantic triples from the KG and supporting text passages from the corpus.
+
+DysLexLens combines graph-based semantic interpretation with source-grounded response generation. It also allows users to ask follow-up questions and fact-check responses through a three-stage evidence-tracing pipeline.
+
+The repository also includes quantitative and qualitative evaluation resources. These include RAGAS-based assessment, query robustness analysis, and a rubric-based human-grounded response quality assessment.
+
+---
+
+## Main Features
+
+- Concept dictionary-based filtering for building a topic-focused corpus
+- Reusable Knowledge Graph construction from online forum data
+- Query-based reasoning over semantic triples and retrieved source text
+- Source-grounded response generation with cited evidence
+- Follow-up question support for deeper analysis
+- Evidence tracing for fact-checking and provenance inspection
+- RAGAS-based quantitative evaluation
+- Query robustness evaluation across original, paraphrased, and keyword-perturbed questions
+- Rubric-based human assessment for response quality and evidence grounding
+
+---
+
+## Example Knowledge Graph
+
+The figure below shows an example Knowledge Graph generated for one of the main research questions.
+
+> To view the interactive graph, open:  
+> [`docs/knowledge_graph/graph_RQ1.html`](docs/knowledge_graph/graph_RQ1.html)
+
+If you also save a screenshot of the graph, for example as `docs/knowledge_graph/graph_RQ1.png`, you can display it directly in the README using:
+
+```md
+![Example Knowledge Graph for RQ1](docs/knowledge_graph/graph_RQ1.png)
+```
+
+---
+
+## Repository Structure
+
+```text
+DysLexLens/
+│
+├── README.md
+├── LICENSE
+├── CITATION.cff
+├── requirements.txt
+├── .gitignore
+├── .env.example
+│
+├── docs/
+│   ├── README.md
+│   ├── repository_structure.md
+│   ├── running_the_tool.md
+│   ├── knowledge_graph/
+│   │   └── graph_RQ1.html
+│   └── main_questions/
+│       ├── RQ1/
+│       ├── RQ2/
+│       ├── RQ3/
+│       ├── RQ4/
+│       └── RQ5/
+│
+├── questions/
+│   ├── README.md
+│   ├── benchmark_questions.md
+│   ├── benchmark_questions.csv
+│   └── query_robustness_variants.csv
+│
+├── data/
+│   ├── README.md
+│   ├── sample/
+│   │   └── sample_reddit_input.csv
+│   ├── processed/
+│   │   └── filtered_reddit_corpus.csv
+│   └── dictionary/
+│       ├── seed_keywords.csv
+│       └── expanded_concept_dictionary.csv
+│
+├── reddit_data/
+│
+└── evaluation/
+    ├── README.md
+    ├── quantitative_ragas_assessment/
+    │   ├── ragas_results_main_and_followups.csv
+    │   └── ragas_summary.md
+    ├── quantitative_query_robustness_assessment/
+    │   ├── query_robustness_all30_variants.csv
+    │   ├── query_robustness_scores.csv
+    │   └── query_robustness_summary.md
+    └── qualitative_human_grounded_response_quality_assessment/
+        ├── human_evaluation_protocol.md
+        ├── human_audit_completed.csv
+        └── audit_summary.md
+```
+
+---
+
+## Folder Description
+
+### `docs/`
+
+This folder contains documentation for understanding and running the DysLexLens framework.
+
+It includes the repository structure, tool running instructions, Knowledge Graph outputs, and main question outputs organised by research question.
+
+### `docs/knowledge_graph/`
+
+This folder contains Knowledge Graph outputs generated by DysLexLens.
+
+For example:
+
+```text
+docs/knowledge_graph/graph_RQ1.html
+```
+
+This file provides an interactive graph view for RQ1.
+
+### `docs/main_questions/`
+
+This folder contains outputs or supporting files for each main research question.
+
+```text
+docs/main_questions/
+├── RQ1/
+├── RQ2/
+├── RQ3/
+├── RQ4/
+└── RQ5/
+```
+
+Each folder can store the generated answer, evidence report, metrics, graph output, and trace files for the related research question.
+
+### `questions/`
+
+This folder contains the benchmark questions used in the paper and evaluation pipeline.
+
+It includes:
+
+- `benchmark_questions.md`: human-readable list of main and follow-up questions
+- `benchmark_questions.csv`: machine-readable version used by the tool
+- `query_robustness_variants.csv`: original, paraphrased, and keyword-perturbed question variants
+
+### `data/`
+
+This folder contains data resources used by DysLexLens.
+
+It includes:
+
+- sample input data
+- processed or filtered corpus files
+- concept dictionary files used for topic-focused filtering
+
+### `reddit_data/`
+
+This folder can be used to store Reddit data files where appropriate.
+
+If the full Reddit dataset cannot be shared due to ethics, privacy, or platform restrictions, this folder should contain only sample or anonymised data. The `data/README.md` file should explain how the data was prepared and what fields are required to run the tool.
+
+### `evaluation/`
+
+This folder contains the evaluation materials used to assess DysLexLens.
+
+It includes three main parts:
+
+1. **Quantitative RAGAS assessment**
+2. **Quantitative query robustness assessment**
+3. **Qualitative human-grounded response quality assessment**
+
+---
+
+## Evaluation Components
+
+### RAGAS Assessment
+
+The folder below contains the RAGAS evaluation results for the main research questions and follow-up questions:
+
+```text
+evaluation/quantitative_ragas_assessment/
+```
+
+It includes:
+
+- `ragas_results_main_and_followups.csv`
+- `ragas_summary.md`
+
+The RAGAS evaluation measures:
+
+- Response Relevancy
+- Faithfulness
+- Context Relevance
+- Response Groundedness
+
+### Query Robustness Assessment
+
+The folder below contains the query robustness analysis:
+
+```text
+evaluation/quantitative_query_robustness_assessment/
+```
+
+It includes:
+
+- `query_robustness_all30_variants.csv`
+- `query_robustness_scores.csv`
+- `query_robustness_summary.md`
+
+This evaluation tests whether the system remains stable when questions are written in different ways.
+
+The variants include:
+
+- original questions
+- paraphrased questions
+- keyword-perturbed questions
+
+### Human-Grounded Response Quality Assessment
+
+The folder below contains the qualitative human assessment materials:
+
+```text
+evaluation/qualitative_human_grounded_response_quality_assessment/
+```
+
+It includes:
+
+- `human_evaluation_protocol.md`
+- `human_audit_completed.csv`
+- `audit_summary.md`
+
+This assessment checks whether generated claims are:
+
+- accurate in relation to the original source
+- supported by cited evidence
+- interpretable through traceable provenance
+
+---
+
+## Installation
+
+Create a virtual environment and install the required packages.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+For Windows:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+---
+
+## Environment Variables
+
+Create a `.env` file from `.env.example`.
+
+```bash
+cp .env.example .env
+```
+
+Then add your API key and configuration values.
+
+Example:
+
+```env
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+OPENROUTER_API_BASE=https://openrouter.ai/api/v1
+
+QUERY_LLM_MODEL=openai/gpt-4o-mini
+FIXED_INDEX_LLM_MODEL=openai/gpt-4o-mini
+FIXED_EMBED_MODEL=text-embedding-3-small
+```
+
+Do not upload your real `.env` file to GitHub.
+
+---
+
+## Running the Tool
+
+Run the Streamlit application using:
+
+```bash
+streamlit run src/dyslexlens/app.py
+```
+
+Then use the sidebar to:
+
+1. Enter the API key
+2. Upload the Reddit source CSV
+3. Upload the benchmark question CSV
+4. Select the model and retrieval settings
+5. Run the batch question-answering process
+6. Download the generated outputs
+
+More detailed instructions are available in:
+
+```text
+docs/running_the_tool.md
+```
+
+---
+
+## Required Input Format
+
+The Reddit source CSV should include at least the following columns:
+
+| Column | Description |
+|---|---|
+| `reddit_id` | Unique identifier for the Reddit post or comment |
+| `text_cleaned` | Cleaned text used for retrieval and analysis |
+
+The question CSV should include:
+
+| Column | Description |
+|---|---|
+| `question_id` | Research question identifier, such as `RQ1` |
+| `research_question` | Main research question |
+| `followup_1` to `followup_5` | Follow-up questions for each main question |
+
+---
+
+## Benchmark Questions
+
+The benchmark questions used in the paper are available in:
+
+```text
+questions/benchmark_questions.md
+questions/benchmark_questions.csv
+```
+
+The query robustness variants are available in:
+
+```text
+questions/query_robustness_variants.csv
+```
+
+---
+
+## Reproducibility
+
+To reproduce the evaluation workflow:
+
+1. Install the required packages.
+2. Create the `.env` file.
+3. Prepare the Reddit source CSV.
+4. Prepare the benchmark question CSV.
+5. Run the DysLexLens Streamlit tool.
+6. Save the generated outputs.
+7. Compare outputs with the files in the `evaluation/` folder.
+
+The evaluation files are included to support transparency and allow reviewers to inspect the reported results.
+
+---
+
+## Citation
+
+If you use DysLexLens in your research, please cite the related paper and this repository.
+
+Citation information is provided in:
+
+```text
+CITATION.cff
+```
+
+---
+
+## Licence
+
+This repository is released under the licence provided in:
+
+```text
+LICENSE
+```
+
+Please check the licence before reusing or modifying the code.
+
+---
+
+## Notes on Data Use
+
+The repository may include sample, processed, or filtered Reddit data for reproducibility. Any shared data should be handled carefully and should follow relevant ethics, privacy, and platform requirements.
+
+If the full dataset cannot be shared, provide a sample file and explain the data format in:
+
+```text
+data/README.md
+```
+
+---
+
+## Project Summary
+
+DysLexLens is designed as an evidence-traceable research assistant rather than a fully automated interpretation tool. It helps researchers retrieve relevant online forum records, generate structured first-pass interpretations, and trace claims back to supporting evidence. Human review remains important, especially for broad claims, temporal analysis, and educational or institutional interpretations.
