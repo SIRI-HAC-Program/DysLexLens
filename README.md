@@ -41,11 +41,6 @@ The figure below shows an example Knowledge Graph generated for one of the main 
 > To view the interactive graph, open:  
 > [`docs/knowledge_graph/graph_RQ1.html`](docs/knowledge_graph/graph_RQ1.html)
 
-If you also save a screenshot of the graph, for example as `docs/knowledge_graph/graph_RQ1.png`, you can display it directly in the README using:
-
-```md
-![Example Knowledge Graph for RQ1](docs/knowledge_graph/graph_RQ1.png)
-```
 
 ---
 
