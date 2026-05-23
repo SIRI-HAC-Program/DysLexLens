@@ -11,7 +11,7 @@ This repository provides the supporting materials for the DysLexLens paper, incl
 The DysLexLens tool can be accessed through the live application link below:
 
 ```text
-[LIVE_APP_LINK_HERE](https://knowledge-graph-tool.onrender.com)
+https://knowledge-graph-tool.onrender.com
 ```
 
 Please use the live link to explore the tool, upload supported input files, run benchmark questions, inspect generated responses, and review evidence-linked outputs.
