@@ -121,16 +121,6 @@ DysLexLens/
 
 ## Folder Description
 
-### `docs/`
-
-This folder contains documentation and example outputs related to the DysLexLens workflow.
-
-It includes:
-
-- repository structure information
-- instructions for using the live tool
-- example Knowledge Graph outputs
-- main research-question outputs organised by RQ folder
 
 ### `knowledge_graph/`
 
