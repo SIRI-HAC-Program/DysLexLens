@@ -125,6 +125,14 @@ docs/running_the_tool.md
 
 ---
 
+## View the graph
+
+- **Download/clone and open locally:** [`graph_RQ1.html`](./graph_RQ1.html)
+
+Click a node to highlight its connections; hover over a node or edge to see mention/occurrence counts.
+
+---
+
 ## Required Input Format
 
 The Reddit source CSV should include at least the following columns:
